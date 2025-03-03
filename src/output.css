@@ -18,6 +18,8 @@
     --font-weight-bold: 700;
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
     --default-font-variation-settings: var(
@@ -240,6 +242,9 @@
   .table {
     display: table;
   }
+  .h-\[10vh\] {
+    height: 10vh;
+  }
   .h-\[12vh\] {
     height: 12vh;
   }
@@ -415,6 +420,9 @@
   .px-\[30px\] {
     padding-inline: 30px;
   }
+  .px-\[50\%\] {
+    padding-inline: 50%;
+  }
   .px-\[50px\] {
     padding-inline: 50px;
   }
@@ -447,6 +455,9 @@
   }
   .text-\[1\.1rem\] {
     font-size: 1.1rem;
+  }
+  .text-\[1\.5rem\] {
+    font-size: 1.5rem;
   }
   .text-\[1\.8rem\] {
     font-size: 1.8rem;
@@ -491,6 +502,30 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-500 {
+    --tw-duration: 500ms;
+    transition-duration: 500ms;
+  }
+  .hover\:text-gray-500 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-gray-500);
+      }
+    }
+  }
+  .hover\:duration-500 {
+    &:hover {
+      @media (hover: hover) {
+        --tw-duration: 500ms;
+        transition-duration: 500ms;
+      }
+    }
+  }
 }
 @property --tw-border-style {
   syntax: "*";
@@ -505,4 +540,8 @@
   syntax: "*";
   inherits: false;
   initial-value: solid;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
 }
