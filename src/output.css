@@ -206,6 +206,9 @@
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
   .mt-\[10px\] {
     margin-top: 10px;
   }
@@ -217,9 +220,6 @@
   }
   .mt-\[30px\] {
     margin-top: 30px;
-  }
-  .mt-\[50px\] {
-    margin-top: 50px;
   }
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
@@ -417,11 +417,11 @@
   .p-\[10px\] {
     padding: 10px;
   }
+  .px-\[20px\] {
+    padding-inline: 20px;
+  }
   .px-\[30px\] {
     padding-inline: 30px;
-  }
-  .px-\[50\%\] {
-    padding-inline: 50%;
   }
   .px-\[50px\] {
     padding-inline: 50px;
@@ -434,6 +434,9 @@
   }
   .py-\[8px\] {
     padding-block: 8px;
+  }
+  .py-\[50px\] {
+    padding-block: 50px;
   }
   .pb-\[10px\] {
     padding-bottom: 10px;
@@ -524,6 +527,91 @@
         --tw-duration: 500ms;
         transition-duration: 500ms;
       }
+    }
+  }
+  .sm\:mt-0 {
+    @media (width >= 40rem) {
+      margin-top: calc(var(--spacing) * 0);
+    }
+  }
+  .sm\:block {
+    @media (width >= 40rem) {
+      display: block;
+    }
+  }
+  .sm\:h-\[12vh\] {
+    @media (width >= 40rem) {
+      height: 12vh;
+    }
+  }
+  .sm\:h-\[45vh\] {
+    @media (width >= 40rem) {
+      height: 45vh;
+    }
+  }
+  .sm\:h-\[90vh\] {
+    @media (width >= 40rem) {
+      height: 90vh;
+    }
+  }
+  .sm\:w-\[25px\] {
+    @media (width >= 40rem) {
+      width: 25px;
+    }
+  }
+  .sm\:w-\[40\%\] {
+    @media (width >= 40rem) {
+      width: 40%;
+    }
+  }
+  .sm\:w-\[50\%\] {
+    @media (width >= 40rem) {
+      width: 50%;
+    }
+  }
+  .sm\:w-\[60\%\] {
+    @media (width >= 40rem) {
+      width: 60%;
+    }
+  }
+  .sm\:w-\[70\%\] {
+    @media (width >= 40rem) {
+      width: 70%;
+    }
+  }
+  .sm\:w-\[250px\] {
+    @media (width >= 40rem) {
+      width: 250px;
+    }
+  }
+  .sm\:flex-row {
+    @media (width >= 40rem) {
+      flex-direction: row;
+    }
+  }
+  .sm\:gap-0 {
+    @media (width >= 40rem) {
+      gap: calc(var(--spacing) * 0);
+    }
+  }
+  .sm\:px-\[50px\] {
+    @media (width >= 40rem) {
+      padding-inline: 50px;
+    }
+  }
+  .sm\:py-0 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 0);
+    }
+  }
+  .sm\:text-\[2\.2rem\] {
+    @media (width >= 40rem) {
+      font-size: 2.2rem;
+    }
+  }
+  .sm\:text-\[2rem\] {
+    @media (width >= 40rem) {
+      font-size: 2rem;
     }
   }
 }
